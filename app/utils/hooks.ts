@@ -11,12 +11,7 @@ export function useAllModels() {
       [configStore.customModels, accessStore.customModels].join(","),
       accessStore.defaultModel,
     );
-  }, [
-    accessStore.customModels,
-    accessStore.defaultModel,
-    configStore.customModels,
-    configStore.models,
-  ]);
+  }, [accessStore.customModels, configStore.customModels, configStore.models]);
 
   return models;
 }
